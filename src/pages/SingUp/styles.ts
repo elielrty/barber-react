@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { shade } from 'polished'
 
-import img from '../../assets/55.jpg';
+import img from '../../assets/66.jpg';
 
 export const Container = styled.div`
     height: 100vh; // pegar toda a tela baseada no monitor de que estar vendo
@@ -41,7 +41,7 @@ export const Content = styled.div`
     }
 
     > a { // o >  e para pegar as tags a acima do content
-            color: #ff9000;
+            color: #666360;
             display: flex;
             margin-top: 24px;
             text-decoration: none;
@@ -54,7 +54,7 @@ export const Content = styled.div`
             }
 
             &:hover {
-                color: ${shade(0.2, '#ff9000')}
+                color: ${shade(0.2, '#666360')}
             }
         }
 `;
