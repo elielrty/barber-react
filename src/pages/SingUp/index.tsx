@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {Form} from '@unform/web'
 
 import { FiArrowLeft, FiMail, FiLock, FiUser } from "react-icons/fi";
 import LogoImg from '../../assets/barbearia.svg';
@@ -10,13 +11,17 @@ import Button from   '../../components/Button'
 const SingIn: React.FC = () => {
     const [data, setData] = useState({})
 
+    function handleSubmit(data: object): void {
+        console.log(data)
+    }
+
     return (
     <Container>
         <Background />
         <Content>
-            <img src={LogoImg} alt="Baber" height="80px" width="80px" />
+            <img src={LogoImg} alt="Barbearia" height="80px" width="80px" />
 
-            <form autoComplete="off">
+            <Form onSubmit={handleSubmit}>
                 <h1>Faça seu cadastro</h1>
                 <Input name="name" icon={FiUser} type="text" placeholder="Nome" />
                 
@@ -24,8 +29,8 @@ const SingIn: React.FC = () => {
 
                 <Input name="password" icon={FiLock} type="password" placeholder="Senha"/>
                 
-                <Button type="button">Cadastrar</Button>
-          </form>
+                <Button type="submit">Cadastrar</Button>
+          </Form>
             <a href="qualquerCoisa">
                 <FiArrowLeft/>
                 Voltar para o logon

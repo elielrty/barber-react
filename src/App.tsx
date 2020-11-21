@@ -6,8 +6,8 @@ import SingUp from './pages/SingUp'
 
 const App: React.FC = () => (
   <>
-  <StyledGlobal/>
   <SingUp/>
+  <StyledGlobal/>
   </>
 );
 
